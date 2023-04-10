@@ -15,9 +15,9 @@
 namespace facebook {
 namespace xplat {
 
-class RNDeviceInfoModule : public module::CxxModule {
+class RNDeviceInfo : public module::CxxModule {
  public:
-  RNDeviceInfoModule();
+  RNDeviceInfo();
   virtual auto getConstants() -> std::map<std::string, folly::dynamic>;
   virtual auto getMethods() -> std::vector<Method>;
   std::string getName();

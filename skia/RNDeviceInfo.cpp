@@ -8,16 +8,16 @@
 #include "ReactSkia/utils/RnsLog.h"
 #include <cxxreact/JsArgumentHelpers.h>
 
-#include "RNDeviceInfoModule.h"
+#include "RNDeviceInfo.h"
 
 using namespace folly;
 
 namespace facebook {
 namespace xplat {
 
-RNDeviceInfoModule::RNDeviceInfoModule() { }
+RNDeviceInfo::RNDeviceInfo() { }
 
-auto RNDeviceInfoModule::getConstants() -> std::map<std::string, folly::dynamic> {
+auto RNDeviceInfo::getConstants() -> std::map<std::string, folly::dynamic> {
   return {
     {"deviceId", "nagradeviceId"},
     {"bundleId", "nagrabundleId"},
@@ -33,11 +33,11 @@ auto RNDeviceInfoModule::getConstants() -> std::map<std::string, folly::dynamic>
   };
 }
 
-std::string RNDeviceInfoModule::getName() {
+std::string RNDeviceInfo::getName() {
   return "RNDeviceInfo";
 }
 
-auto RNDeviceInfoModule::getMethods() -> std::vector<Method> {
+auto RNDeviceInfo::getMethods() -> std::vector<Method> {
   return {
     Method(
         "isEmulator",

@@ -1,6 +1,6 @@
 import("//react-native/common.gni")
 
-config("LibRNDeviceInfoModule_config") {
+config("LibRNDeviceInfo_config") {
   cflags_cc = [ "-std=c++17"]
   cflags_cc += [
     "-Wno-extra-semi",
@@ -13,15 +13,15 @@ config("LibRNDeviceInfoModule_config") {
                 ]
 }
 
-rn_cxx_tp_component("rndeviceinfomodule") {
+rns_cxx_tp_component("rndeviceinfo") {
 
-  # RS Native module and its dependencies
+  # Native module and its dependencies
   sources = [
-    "RNDeviceInfoModule.h",
-    "RNDeviceInfoModule.cpp",
+    "RNDeviceInfo.h",
+    "RNDeviceInfo.cpp",
   ]
 
-  public_configs = [ ":LibRNDeviceInfoModule_config" ]
+  public_configs = [ ":LibRNDeviceInfo_config" ]
   public_configs += [ "//build/secondary/folly:folly_config" ]
   deps = [
     "//folly",
