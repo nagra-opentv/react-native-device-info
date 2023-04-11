@@ -4,9 +4,9 @@
     "version": "5.6.5",
     "type": "modules",
     "skia": {
-      "TurboModuleRegistryGetEnforcingSpec" : [ 
+      "TurboModuleRegistryGetEnforcingSpec" : [
         "RNDeviceInfo"
-      ]   
-    }   
+      ]
+    }
   }
 }
