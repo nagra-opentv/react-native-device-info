@@ -15,12 +15,12 @@
 namespace facebook {
 namespace xplat {
 
-class RNDeviceInfo : public module::CxxModule {
+class RNDeviceInfoModule : public module::CxxModule {
  public:
-  RNDeviceInfo();
-  virtual auto getConstants() -> std::map<std::string, folly::dynamic>;
-  virtual auto getMethods() -> std::vector<Method>;
-  std::string getName();
+  RNDeviceInfoModule();
+  std::map<std::string, folly::dynamic> getConstants() override;
+  std::vector<Method> getMethods() override;
+  std::string getName() override;
 };
 
 } // namespace xplat
